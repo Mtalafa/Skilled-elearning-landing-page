@@ -1,0 +1,251 @@
+:root {
+  --text-color: #83869a;
+  --btn--heading-secondary: #ffffff;
+  --background-1--heading: #13183f;
+  --link: #f74780;
+  --link-hover: #ffa7c3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 144rem;
+  padding: 2.4rem 16.5rem 0 16.579rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img-box {
+  max-width: 99.163rem;
+  position: absolute;
+  top: -12rem;
+  right: -30rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.text {
+  font-size: 1.8rem;
+  line-height: 1.55;
+}
+
+/*LINKS*/
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  color: var(--btn--heading-secondary);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 2rem 3.8rem;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.6;
+}
+
+.btn-nav:link,
+.btn-nav:visited {
+  background-color: var(--background-1--heading);
+  z-index: 100;
+}
+
+.btn-header:link,
+.btn-header:visited {
+  background-image: linear-gradient(to top, #f02aa6, #ff6f48);
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--link);
+  margin-top: auto;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: var(--link-hover);
+}
+
+.btn-footer:link,
+.btn-footer:visited {
+  background-image: linear-gradient(to bottom, #4851ff, #f02aa6);
+}
+
+.btn-footer:hover,
+.btn-footer:active {
+  background-image: none;
+  background-color: var(--link-hover);
+}
+
+/*HEADER SECTION*/
+
+.nav {
+  margin-bottom: 17.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 11.117rem;
+  height: 2.768rem;
+}
+
+.header-text-box {
+  max-width: 45.7rem;
+  margin-bottom: 22.6rem;
+}
+
+.heading-primary {
+  font-size: 5.6rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 2.9rem;
+  color: var(--background-1--heading);
+}
+
+.header-text {
+  margin-bottom: 4rem;
+}
+
+/*MAIN SECTION*/
+
+.popular-courses {
+  max-width: 111rem;
+  margin-bottom: 14rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 5.6rem;
+}
+
+.heading-secondary {
+  background-image: linear-gradient(to top, #f02aa6, #ff6f48);
+  color: var(--btn--heading-secondary);
+  font-size: 3.2rem;
+  line-height: 1.25;
+  padding: 6.4rem 3.2rem 13.8rem;
+  border-radius: 9px;
+}
+
+.course {
+  position: relative;
+  padding: 6.4rem 3.2rem 4rem;
+  border-radius: 9px;
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.icon {
+  height: 5.6rem;
+  width: 5.6rem;
+  background-image: linear-gradient(to top, #f02aa6, #ff6f48);
+  border-radius: 50%;
+  position: absolute;
+  left: 3rem;
+  top: -2.4rem;
+}
+
+.subheading {
+  font-size: 2.4rem;
+  color: var(--background-1--heading);
+}
+
+/*FOOTER*/
+
+.footer {
+  max-width: 143rem;
+  background-color: var(--background-1--heading);
+  margin: 0 auto;
+  padding: 2.4rem 16.5rem 2.4rem 16.579rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*1168px*/
+
+@media only screen and (max-width: 73em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container,
+  .footer {
+    padding: 2.4rem 8rem 0 8rem;
+  }
+
+  .nav {
+    margin-bottom: 9.9rem;
+  }
+}
+
+/*864px*/
+
+@media only screen and (max-width: 54em) {
+  html {
+    font-size: 50%;
+  }
+  .hero-img-box {
+    position: static;
+  }
+
+  .header-text-box {
+    margin-bottom: 4.6rem;
+  }
+
+  .popular-courses {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*656px*/
+
+@media only screen and (max-width: 41em) {
+  .container,
+  .footer {
+    padding: 2.4rem 2.4rem 0;
+  }
+
+  .popular-courses {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*400px*/
+
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 43.75%;
+  }
+}
